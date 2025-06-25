@@ -1,0 +1,187 @@
+/*=====================
+     SECTION HEROTIQUE
+======================*/
+
+.hero{
+     min-height: 100dvh;   /* Utilise la hauteur dynamique du viewport */
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+     gap: 4rem;
+     /*background-image: url('../assets/Pictures/RomotowT8/img1.jpeg');*/
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     isolation: isolate;
+}
+
+.hero::after {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.45); /* Overlay doux pour texte lisible */
+     z-index: -1;
+}
+
+.hero-content {
+     z-index: 2;
+}
+
+.hero header{
+     width: 100%;
+}
+
+.hero header nav{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.hero header nav .brand{
+     width: auto;
+}
+
+.hero header nav .desktop-menu{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+}
+
+.hero header nav .desktop-menu ul{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     gap: 4rem;
+}
+
+.hero header nav .mobile-menu{
+     display: none;
+}
+
+.hero .hero-content{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     gap: 2.5rem;
+}
+
+.hero-content-infos{
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+}
+
+.hero-content-title,
+.hero-content-infos,
+.hero-cta{
+     width: 100%;
+     height: auto;
+}
+
+.hero-btn{
+     color: #ffffff;
+     background-color: #c58f2c;
+     padding: 0.7rem 1.6rem;
+     transition: all 0.3s ease;
+     font-size: clamp(0.9rem, 3vw, 1.1rem);
+     font-family: 'Spectral', serif;
+     font-weight: 100;
+}
+
+.hero-btn:hover {
+     background-color: #b87f1d; /* Un doré plus foncé */
+}
+
+.brand h1{
+     font-size: clamp(1.8rem, 4vw, 2.3rem);
+     font-weight: 500;
+     font-family: 'Marcellus', serif;
+     text-transform: uppercase;
+     color: #ffffff;
+}
+
+nav ul li a{
+     font-weight: 500;
+     font-family: 'Spectral', serif;
+     font-size: 1rem;
+     transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+     color: #c58f2c;
+}
+
+.hero-content-infos p{
+     font-size: clamp(0.8rem, 5vw, 2rem);
+     font-family: 'Spectral', serif;
+     font-weight: 400;
+}
+
+.hero-content-title h2{
+     font-size: clamp(1rem, 6vw, 4rem);
+     font-family: 'Spectral', serif;
+     font-weight: 400;
+     color: #ffffff;
+}
+
+
+/* Affichage du menu mobile */
+@media screen and (max-width: 900px) {
+     .hero header nav .desktop-menu{
+          display: none;
+          background-color: rebeccapurple;
+     }
+
+     .hero header nav .mobile-menu {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          position: relative;
+     }
+   
+     .hero header nav .mobile-menu ul {
+          position: absolute;
+          top: 60px; /* en-dessous du bouton */
+          right: 0;
+          background-color: #0f1111;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 0.5rem;
+          padding: 1rem;
+          display: none;
+          flex-direction: column;
+          gap: 1rem;
+          z-index: 1000;
+          min-width: 200px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+     }
+   
+     .hero header nav .mobile-menu ul.active {
+          display: flex;
+     }
+   
+     .hero header nav .mobile-menu .menu-btn img {
+          width: 32px;
+          height: 32px;
+          filter: brightness(1.3);
+          cursor: pointer;
+     }
+   
+     .hero header nav .mobile-menu ul li a {
+          font-family: 'Spectral', serif;
+          font-size: 1rem;
+          color: #ffffff;
+          transition: color 0.3s ease;
+     }
+   
+     .hero header nav .mobile-menu ul li a:hover {
+          color: #4ade80;
+     }
+}
+   

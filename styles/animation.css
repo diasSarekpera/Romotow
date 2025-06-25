@@ -1,0 +1,24 @@
+/* Animation slide-up fade-in */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classe appliqu�e quand l��l�ment entre dans le viewport */
+.section-animated {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Classe active une fois visible */
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

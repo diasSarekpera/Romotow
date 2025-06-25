@@ -1,0 +1,117 @@
+/* ============================
+        FOOTER STYLES
+============================= */
+
+.footer {
+     background-color: #0f1111; /* Fond sombre chic */
+     color: #d4d4d4;
+     padding: 4rem 2rem 2rem;
+     font-family: 'Spectral', serif;
+     font-size: 0.95rem;
+     line-height: 1.6;
+     width: 100%;
+}
+   
+.footer a {
+     text-decoration: none;
+     color: inherit;
+     transition: color 0.3s ease;
+}
+   
+.footer a:hover {
+     color: #4ade80; /* Vert accent */
+}
+   
+ /* ========= Layout principal ========= */
+.footer-first-wrapper {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+     gap: 2.5rem;
+     max-width: 1200px;
+     margin: 0 auto 2.5rem;
+}
+   
+/* ======== Titres de section ======== */
+.footer h4 {
+     font-family: 'Marcellus', serif;
+     font-size: 1.1rem;
+     color: #ffffff;
+     margin-bottom: 1rem;
+     letter-spacing: 0.05rem;
+     text-transform: uppercase;
+     font-weight: 500;
+}
+   
+/* ======== Bloc Brand ======== */
+.footer-brand-wrapper p {
+     font-size: 1rem;
+     font-style: italic;
+     font-weight: 300;
+     color: #facc15;
+}
+   
+/* ======== Bloc Contact / Liens ======== */
+.footer-contact-wrapper,
+.footer-links-wrapper,
+.footer-social-icons-wrapper {
+     display: flex;
+     flex-direction: column;
+     gap: 0.8rem;
+}
+   
+.footer-contact-wrapper p,
+.footer-links-wrapper li {
+     display: flex;
+     align-items: center;
+     gap: 0.6rem;
+}
+   
+.footer-contact-wrapper img,
+.footer-links-wrapper img {
+     width: 20px;
+     height: 20px;
+     object-fit: contain;
+}
+   
+/* ======== Liens de navigation ======== */
+.footer-links-wrapper ul {
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     gap: 0.6rem;
+}
+   
+/* ======== Réseaux sociaux ======== */
+.footer-social-icons {
+     display: flex;
+     flex-direction: row;
+     gap: 1rem;
+}
+   
+.footer-social-icons img {
+     width: 22px;
+     height: 22px;
+     filter: brightness(1.2);
+     transition: transform 0.3s ease;
+}
+   
+.footer-social-icons img:hover {
+     transform: scale(1.2);
+}
+   
+/* ======== Bas du footer ======== */
+.footer-second-wrapper {
+     border-top: 1px solid rgba(255, 255, 255, 0.05);
+     padding-top: 2rem;
+     text-align: center;
+     font-size: 0.85rem;
+     color: #aaaaaa;
+     display: flex;
+     flex-direction: column;
+     gap: 0.8rem;
+     max-width: 1200px;
+     margin: 0 auto;
+}
+   

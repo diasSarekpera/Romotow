@@ -1,0 +1,123 @@
+/*=========================================
+     SECTION TÉMOIGNAGES – PRO STYLE
+=========================================*/
+
+.temoignages {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 3rem;
+     font-family: 'Spectral', serif;
+}
+
+/* ==== Titre de section ==== */
+.temoignages-first-content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 1rem;
+     text-align: center;
+     width: 100%;
+}
+
+.temoignages-first-content h3 {
+     font-size: clamp(1.6rem, 5vw, 2.4rem);
+     font-family: 'Marcellus', serif;
+     color: #ffffff;
+     text-transform: uppercase;
+     font-weight: 500;
+}
+
+.temoignages-first-content p {
+     font-size: clamp(1rem, 2.5vw, 1.3rem);
+     color: #facc15;
+     font-style: italic;
+     font-weight: 400;
+}
+
+/* ==== Grille ==== */
+.temoignages-second-content {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     place-items: stretch center;
+     gap: 2rem;
+     width: 100%;
+     max-width: 100%;
+}
+
+@media screen  and (max-width: 768px){
+     /* ==== Grille ==== */
+     .temoignages-second-content {
+          grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+     }
+}
+
+/* ==== Carte témoignage ==== */
+.temoignage-card {
+     background-color: rgba(255, 255, 255, 0.03);
+     border-radius: 1rem;
+     border: 1px solid rgba(255, 255, 255, 0.08);
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+     padding: 1.8rem 1.5rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 1.2rem;
+     text-align: center;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     min-height: 360px;
+}
+
+.temoignage-card:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ==== Profil ==== */
+.tmg-profil {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 0.6rem;
+}
+
+.tmg-profil img {
+     width: 80px;
+     height: 80px;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 2px solid #facc15;
+}
+
+.tmg-infos-name {
+     font-weight: 500;
+     font-size: 1rem;
+     color: #ffffff;
+}
+
+.tmg-info-stars {
+     color: #facc15;
+     font-size: 1rem;
+     letter-spacing: 0.2rem;
+}
+
+/* ==== Témoignage ==== */
+.tmg-comments {
+     text-align: justify;
+     hyphens: auto;
+     font-size: clamp(0.9rem, 4vw, 1.05rem);
+     line-height: 1.7;
+     font-weight: 300;
+     color: #dddddd;
+}
+
+/* ===== Responsive fin ===== */
+@media screen and (max-width: 600px) {
+     .temoignage-card {
+          padding: 1.5rem 1rem;
+     }
+
+     .tmg-comments {
+          text-align: left;
+     }
+}

@@ -1,0 +1,64 @@
+/*===========================
+          BASE.CSS - Fondation du site Lumora
+=============================*/
+
+/*Variable CSS*/
+:root {
+     --font-main: 'Inter', sans-serif;
+}
+
+/*Conteneur central*/
+.main-wrapper{
+     width: 100%;
+     max-width: 1400px;
+     margin: 0 auto;
+     padding: 0 2rem;
+     background-color: gray;
+     background-color: 	#0f1111;
+     color: #d4d4d4;
+}
+
+@media screen and(max-width: 768px) {
+     .main-wrapper{
+          padding: 0 1rem;
+     }
+     section, footer {
+          padding: 3rem 0;
+     }
+}
+
+/*Titres*/
+h1, h2, h3, h4{
+     font-weight: 700;
+     line-height: 1.2;
+}
+
+/*Paragraphes*/
+p{
+     line-height: 1.6;
+}
+
+/*Buttons*/
+.btns{
+     border-radius: 0.4rem;
+     font-weight: 400;
+     transition: background 0.3s ease;
+}
+
+/*Liens*/
+nav li {
+     font-weight: 600;
+     cursor: pointer;
+}
+
+/* 📐 Section spacing */
+section, footer {
+     padding: 4rem 0;
+     width: 100%;
+     margin: 0 auto;
+}
+
+textarea{
+     resize: none;
+}
+ 

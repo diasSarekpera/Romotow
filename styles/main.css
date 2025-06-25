@@ -1,0 +1,15 @@
+@import url('./reset.css');  /*Reinitialisation complete CSS*/
+@import url('./base.css');  /*Typographie, taille, couleur de base*/
+@import url('./layout.css');  /*grid, flex, containers, sections, etc ...*/
+@import url('./hero.css');  /*Hero Section*/
+@import url('./about.css');  /*About section*/
+@import url('./why.css'); /*Why-us section*/
+@import url('./desc.css'); /*Description section*/
+@import url('./galerie.css'); /*Galerie*/
+@import url('./temoignages.css'); /*Témoignages*/
+@import url('./contact.css'); /*Contact*/
+@import url('./prefooter.css'); /*Prefooter*/
+@import url('./footer.css'); /*Footer*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('./animation.css'); /*Animation*/

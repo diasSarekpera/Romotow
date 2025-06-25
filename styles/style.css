@@ -1,0 +1,1055 @@
+/*========================
+     RESET CSS DE BASE
+=========================*/
+
+*,
+*::before,
+*::after{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html{
+     scroll-behavior: smooth;
+}
+
+body{
+     line-height: 1.5;
+     font-family: 'Inter', sans-serif;
+     background-color: #fff;
+     color: #111;
+     -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg{
+     display: block;
+     max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select{
+     font: inherit;
+     outline: none;
+     border: none;
+     background: none;
+}
+
+a{
+     text-decoration: none;
+     color: inherit;
+}
+
+ol,
+ul{
+     list-style: none;
+}
+
+button{
+     cursor: pointer;
+}
+
+/*===========================
+          BASE.CSS - Fondation du site Lumora
+=============================*/
+
+/*Variable CSS*/
+:root {
+     --font-main: 'Inter', sans-serif;
+}
+
+/*Conteneur central*/
+.main-wrapper{
+     width: 100%;
+     max-width: 1400px;
+     margin: 0 auto;
+     padding: 0 2rem;
+     background-color: gray;
+     background-color: 	#0f1111;
+     color: #d4d4d4;
+     
+}
+
+/*Titres*/
+h1, h2, h3, h4{
+     font-weight: 700;
+     line-height: 1.2;
+}
+
+/*Paragraphes*/
+p{
+     line-height: 1.6;
+}
+
+/*Buttons*/
+.btns{
+     border-radius: 0.4rem;
+     font-weight: 400;
+     transition: background 0.3s ease;
+}
+
+/*Liens*/
+nav li {
+     font-weight: 600;
+     cursor: pointer;
+}
+
+/* 📐 Section spacing */
+section, footer {
+     padding: 4rem 0;
+     width: 100%;
+     margin: 0 auto;
+}
+
+textarea{
+     resize: none;
+}
+ 
+
+/*=====================
+     SECTION HEROTIQUE
+======================*/
+
+.hero{
+     min-height: 100dvh;   /* Utilise la hauteur dynamique du viewport */
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+     gap: 4rem;
+}
+
+.hero header{
+     width: 100%;
+
+}
+
+.hero header nav{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.hero header nav .brand{
+     width: auto;
+}
+
+.hero header nav .desktop-menu{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+}
+
+.hero header nav .desktop-menu ul{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     gap: 4rem;
+}
+
+.hero header nav .mobile-menu{
+     display: none;
+}
+
+.hero .hero-content{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     gap: 2.5rem;
+}
+
+.hero-content-infos{
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+}
+
+.hero-content-title,
+.hero-content-infos,
+.hero-cta{
+     width: 100%;
+     height: auto;
+}
+
+.hero-btn{
+     color: #ffffff;
+     background-color: #c58f2c;
+     padding: 0.7rem 1.6rem;
+     transition: all 0.3s ease;
+     font-size: clamp(0.9rem, 3vw, 1.1rem);
+     font-family: 'Spectral', serif;
+     font-weight: 100;
+}
+
+.hero-btn:hover {
+     background-color: #b87f1d; /* Un doré plus foncé */
+}
+
+.brand h1{
+     font-size: clamp(1.8rem, 4vw, 2.3rem);
+     font-weight: 500;
+     font-family: 'Marcellus', serif;
+     text-transform: uppercase;
+     color: #ffffff;
+}
+
+nav ul li a{
+     font-weight: 500;
+     font-family: 'Spectral', serif;
+     font-size: 1rem;
+     transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+     color: #c58f2c;
+}
+
+.hero-content-infos p{
+     font-size: clamp(0.8rem, 5vw, 2rem);
+     font-family: 'Spectral', serif;
+     font-weight: 400;
+}
+
+.hero-content-title h2{
+     font-size: clamp(1rem, 6vw, 4rem);
+     font-family: 'Spectral', serif;
+     font-weight: 400;
+     color: #ffffff;
+}
+
+
+/* Affichage du menu mobile */
+@media screen and (max-width: 900px) {
+     .hero header nav .desktop-menu{
+          display: none;
+          background-color: rebeccapurple;
+     }
+
+     .hero header nav .mobile-menu {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          position: relative;
+     }
+   
+     .hero header nav .mobile-menu ul {
+          position: absolute;
+          top: 60px; /* en-dessous du bouton */
+          right: 0;
+          background-color: #0f1111;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 0.5rem;
+          padding: 1rem;
+          display: none;
+          flex-direction: column;
+          gap: 1rem;
+          z-index: 1000;
+          min-width: 200px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+     }
+   
+     .hero header nav .mobile-menu ul.active {
+          display: flex;
+     }
+   
+     .hero header nav .mobile-menu .menu-btn img {
+          width: 32px;
+          height: 32px;
+          filter: brightness(1.3);
+          cursor: pointer;
+     }
+   
+     .hero header nav .mobile-menu ul li a {
+          font-family: 'Spectral', serif;
+          font-size: 1rem;
+          color: #ffffff;
+          transition: color 0.3s ease;
+     }
+   
+     .hero header nav .mobile-menu ul li a:hover {
+          color: #4ade80;
+     }
+}
+
+
+
+/*============================
+     CODE CSS DE LA SECTION ABOUT
+==============================*/
+
+.about{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: flex-start;
+     flex-wrap: wrap;
+     gap: 2rem;
+     font-family: 'Spectral';
+}
+
+.about-left-content{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 2rem;
+     max-width: 600px;
+     flex: 1;
+}
+
+.about-left-content figure{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+}
+
+.about-left-content figure video{
+     height: auto;
+     object-fit: cover;
+     border-radius: 1rem;
+     display: block;
+     height: auto;
+     aspect-ratio: 1/1; /* 💡 Clé de la stabilité */
+}
+
+.about-features{
+     width: 100%;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 1.5rem;
+     font-size: 1rem;
+}
+
+.about-features li{
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+}
+
+.about-features li img{
+     width: 24px;
+     height: 24;
+     filter: brightness(1.2); /* ou apply color here */
+}
+
+.about-right-content{
+     flex: 1;
+     max-width: 600px;
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+     width: 100%;
+     text-align: justify;
+     hyphens: auto;
+}
+
+.about-right-title{
+     font-size: clamp(1.2rem, 5vw, 2.4rem);
+     font-weight: 500;
+     text-align: center;
+     color: #ffffff;
+     text-transform: uppercase;
+     font-family: 'Marcellus', serif;
+}
+
+.about-right-subtitle{
+     color: #FFD700; /* ou #facc15 pour un doré plus doux */
+     text-align: center;
+     font-size: clamp(1.1rem, 3vw, 1.3rem);
+     font-family: 500;
+}
+
+.about-right-content p{
+     font-size: clamp(0.9rem, 4vw, 1.1rem);
+     font-weight: 100;
+}
+
+.about-btn{
+     background-color: #22c55e;
+     padding: 0.7rem 1.8rem;
+     font-weight: bold;
+     text-align: center;
+}
+
+.about-btn:hover {
+     background-color: #16a34a;
+}
+
+@media screen and (max-width: 900px) {
+     .about{
+          flex-direction: column-reverse;
+          gap: 1.5rem;
+     }
+}
+
+
+/*============================
+     CODE CSS SECTION WHY US
+=============================*/
+
+.why-us{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 3rem;
+     font-family: 'Spectral', serif;
+}
+
+.why-us-header{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 1rem;
+}
+
+.why-us-header h3{
+     font-size: clamp(1.2rem, 5vw, 2.4rem);
+     font-weight: 500;
+     text-align: center;
+     color: #ffffff;
+     text-transform: uppercase;
+     font-family: 'Marcellus', serif;
+}
+
+.why-us-header p {
+     color: #FFD700; /* ou #facc15 pour un doré plus doux */
+     text-align: center;
+     font-size: clamp(1rem, 3vw, 1.2rem);
+     font-weight: 500;
+}
+
+.why-us-grid{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 2rem;
+     width: 100%;
+}
+
+.why-us-grid-box{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     gap: 1rem;
+     font-size: clamp(0.9rem, 4vw, 1.1rem);
+}
+
+.why-us-grid-box-title{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     gap: 1rem;
+     font-size: 1.1rem;
+     font-weight: bold;
+     color: #ffffff;
+}
+
+.why-us-grid-box-content{
+     text-align: justify;
+     hyphens: auto;
+}
+
+.why-us-grid-box-title img {
+     width: 32px;
+     height: 32;
+     filter: brightness(1.2); /* ou apply color here */
+}
+
+@media screen and (max-width: 768px) {
+     .why-us-grid-box-title img{
+          width: 24px;
+          height: 24px;
+          filter: brightness(1.1);
+     }
+}
+
+
+.description{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 2rem;
+     font-family: 'Spectral';
+}
+
+.description-title{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     align-items: center;
+     gap: 1rem;
+}
+
+.description-title h3{
+     font-size: clamp(1.2rem, 5vw, 2.4rem);
+     font-weight: 500;
+     text-align: center;
+     color: #ffffff;
+     text-transform: uppercase;
+     font-family: 'Marcellus', serif;
+}
+
+.description-title p{
+     color: #FFD700; /* ou #facc15 pour un doré plus doux */
+     text-align: center;
+     font-size: clamp(1rem, 3vw, 1.2rem);
+     font-family: 500;
+}
+
+.description-content{
+     width: 100%;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 2rem;
+}
+
+.desc-content-box{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     gap: 1rem;
+     font-size: clamp(0.9rem, 4vw, 1.1rem);
+}
+
+.desc-content-box-title{
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+     align-items: center;
+     width: 100%;
+     gap: 0.8rem;
+     font-size: 1.1rem;
+     font-weight: bold;
+     color: #ffffff;
+}
+
+.desc-content-box-title img{
+     width: 32px;
+     height: 32px;
+     filter: brightness(1.2);
+}
+
+@media screen and (max-width: 768px) {
+     .desc-content-box-title img{
+          width: 24px;
+          height: 24px;
+          filter: brightness(1.1);
+     }
+}
+
+.desc-content-box-infos{
+     text-align: justify;
+     hyphens: auto;
+}
+
+
+/*===============================
+     CODE CSS DE LA SECTION GALERIE
+===============================*/
+.galerie{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     margin: 0 auto;
+     gap: 2rem;
+     font-family: 'Spectral', serif;
+}
+
+.galerie-title{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     gap: 1rem;
+}
+
+.galerie-title h3{
+     font-size: clamp(1.2rem, 5vw, 2.4rem);
+     font-weight: 500;
+     text-align: center;
+     color: #ffffff;
+     text-transform: uppercase;
+     font-family: 'Marcellus', serif;
+}
+
+.galerie-title p{
+     color: #FFD700; /* ou #facc15 pour un doré plus doux */
+     text-align: center;
+     font-size: clamp(1rem, 3vw, 1.2rem);
+     font-weight: 500;
+}
+
+.galerie-content{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 1.5rem;
+     width: 100%;
+}
+
+.galerie-image{
+     position: relative;
+     overflow: hidden;
+     border-radius: 1rem;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     aspect-ratio: 1/1;
+}
+
+.galerie-image img{
+     width: 100%;
+     height: 100%;
+     transform: scale(1);
+     transition: transform 0.3s ease;
+     object-fit: cover;
+     display: block;
+}
+
+.galerie-image img:hover{
+     transform: scale(1.1);/* Zoom léger centré */
+     cursor: pointer;
+}
+
+
+/*====================================
+     CODE CSS DE LA SSECTION TEMOIGNAGES
+=====================================*/
+
+
+.temoignages{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 0 auto;
+     gap: 2.5rem;
+     font-family: 'Spectral', serif;
+}
+
+.temoignages-first-content{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 1rem;
+}
+
+.temoignages-first-content h3{
+     font-size: clamp(1.2rem, 5vw, 2.4rem);
+     font-weight: 500;
+     text-align: center;
+     color: #ffffff;
+     text-transform: uppercase;
+     font-family: 'Marcellus', serif;
+}
+
+.temoignages-first-content p{
+     color: #FFD700; /* ou #facc15 pour un doré plus doux */
+     text-align: center;
+     font-size: clamp(1rem, 3vw, 1.2rem);
+     font-weight: 500;
+}
+
+.temoignages-second-content{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 1.8rem;
+     place-items: stretch center;
+     width: 100%;
+}
+
+.temoignages-second-content .temoignage-card{
+     background-color: rgba(255, 255, 255, 0.04);
+     border-radius: 1rem;
+     border: 1px solid rgba(255, 255, 255, 0.1);
+     box-shadow: 0 4px 12px rgba(0, 0 , 0, 0.1);
+     transition: transform 0.3s ease;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     min-height: 320px;
+     padding: 1.5rem;
+     max-width: 350px;
+     overflow: hidden;
+     margin-inline: auto;
+     font-size: clamp(0.9rem, 4vw, 1.1rem);
+}
+
+.temoignage-card:hover{
+     transform: translateY(-5px);
+}
+
+.tmg-infos-name{
+     text-align: center;
+     width: 100%;
+}
+
+.tmg-comments{
+     text-align: justify;
+     hyphens: auto;
+     font-size: clamp(0.8rem, 4vw, 1rem);
+     line-height: 1.6;
+     font-weight: 500;
+}
+
+.tmg-profil{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 0.8rem;
+}
+
+.tmg-profil img{
+     width: 80px;
+     height: 80px;
+     object-fit: cover;
+     border-radius: 50%;
+}
+
+.tmg-info-stars{
+     color: #FFD700; /* ou #facc15 pour un doré plus doux */
+}
+
+
+/*================================
+     CODE CSS DE LA SECTION CONTACT
+==================================*/
+.contact {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 2rem;
+     font-family: 'Spectral', serif;
+}
+
+.contact-first-block{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     gap: 1rem;
+}
+
+.contact-first-block h3{
+     font-size: clamp(1.2rem, 5vw, 2.4rem);
+     font-weight: 500;
+     text-align: center;
+     color: #ffffff;
+     text-transform: uppercase;
+     font-family: 'Marcellus', serif;
+}
+
+.contact-first-block p{
+     color: #FFD700; /* ou #facc15 pour un doré plus doux */
+     text-align: center;
+     font-size: clamp(1rem, 3vw, 1.2rem);
+     font-weight: 500;
+}
+   
+.contact-second-block {
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     gap: 2rem;
+     flex-wrap: wrap;
+     width: 100%;
+}
+   
+.contact-second-block > * {
+     flex: 1;
+     max-width: 600px;
+     padding: 1rem;
+}
+   
+.contact-second-block-left form {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     gap: 2rem;
+}
+
+.contact-second-block-left h4,
+.contact-second-block-right h4{
+     font-family: 'Marcellus', serif;
+     font-size: 1rem;
+     font-family: 100;
+     letter-spacing: 0.09rem;
+}
+   
+.form-wrapper {
+     display: flex;
+     flex-direction: column;
+     gap: 0.5rem;
+}
+   
+input,
+textarea {
+     background-color: inherit;
+     border: 1px solid #4ade80;
+     padding: 0.75rem;
+     border-radius: 0.5rem;
+     font-size: clamp(0.9rem, 4vw, 1rem);
+     width: 100%;
+     transition: border-color 0.3s ease;
+}
+   
+input:focus,
+textarea:focus {
+     outline: none;
+     border-color: #22c55e;
+}
+   
+.contact-btn {
+     background-color: #42cf76;
+     color: #fff;
+     font-weight: 400;
+     font-size: 1.1rem;
+     padding: 1rem 2rem;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     width: 100%;
+     font-family: 'Marcellus', serif;
+     letter-spacing: 0.1rem;
+}
+   
+.contact-btn:hover {
+     background-color: #22c55e;
+}
+
+.contact-second-block-right, .contact-second-block-left{
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+}
+
+.contact-second-block-right address {
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+}
+   
+.contact-second-block-right address p {
+     display: flex;
+     gap: 1rem;
+     align-items: center;
+}   
+
+.contact-second-block-right address p img{
+     width: 24px;
+     height: 24px;
+     filter: brightness(1.2);
+}
+
+@media screen and (max-width: 768px) {
+     .contact-second-block{
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .contact-second-block-right address p img{
+          width: 18px;
+          height: 18px;
+          filter: brightness(1.1);
+     }
+}
+
+
+/*===============================
+     CODE CSS DU PRE FOOTER
+================================*/
+
+.pre-footer{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     gap: 2.2rem;
+     font-family: 'Spectral', serif;
+}
+
+.pre-footer h3{
+     font-size: clamp(1.2rem, 5vw, 2.4rem);
+     font-weight: 500;
+     text-align: center;
+     color: #ffffff;
+     text-transform: uppercase;
+     font-family: 'Marcellus', serif;
+}
+
+.pre-footer p{
+     color: #FFD700; /* ou #facc15 pour un doré plus doux */
+     text-align: center;
+     font-size: clamp(1rem, 3vw, 1.2rem);
+     font-weight: 300;
+}
+
+.btn-prefooter{
+     background-color: #42cf76;
+     color: #fff;
+     font-weight: 400;
+     font-size: 1.1rem;
+     padding: 0.7rem 1.8rem;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     font-family: 'Marcellus', serif;
+     letter-spacing: 0.1rem;
+}
+
+.btn-prefooter:hover{
+     background-color: #22c55e;
+}
+
+/*============================
+     FOOTER
+=============================*/
+
+.footer {
+     font-size: 0.95rem;
+     line-height: 1.6;
+     width: 100%;
+     font-family: 'Spectral', serif;
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+}
+
+.footer > *{
+     width: 100%;
+}
+
+.footer a {
+     text-decoration: none;
+     transition: color 0.3s ease;
+}
+
+.footer a:hover {
+     color: #d69724;
+}
+
+.footer-first-wrapper {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+     gap: 2rem;
+     max-width: 1200px;
+     margin: 0 auto;
+     margin-bottom: 2.5rem;
+}
+
+.footer-brand-wrapper h4,
+.footer-contact-wrapper h4,
+.footer-links-wrapper h4,
+.footer-social-icons-wrapper h4 {
+     font-size: clamp(1rem, 4vw, 1.2rem);
+     color: #ffffff;
+     margin-bottom: 1rem;
+     font-family: 'Marcellus', serif;
+     font-weight: 100;
+     letter-spacing: 0.1rem;
+}
+
+.footer-brand-wrapper h4{
+     text-transform: uppercase;
+}
+
+.footer-brand-wrapper p{
+     color: #FFD700; /* ou #facc15 pour un doré plus doux */
+     text-align: center;
+     font-size: clamp(1rem, 3vw, 1.2rem);
+     font-weight: 100;
+}
+
+.footer-brand-wrapper,
+.footer-contact-wrapper,
+.footer-links-wrapper,
+.footer-social-icons-wrapper{
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+}
+
+.footer-contact-wrapper p,
+.footer-brand-wrapper p {
+     display: flex;
+     align-items: center;
+     gap: 0.6rem;
+}
+
+.footer-contact-wrapper img,
+.footer-links-wrapper img {
+     width: 20px;
+     height: 20px;  
+}
+
+.footer-links-wrapper ul {
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+     gap: 0.8rem;
+}
+
+.footer-links-wrapper li {
+     display: flex;
+     align-items: center;
+     gap: 0.6rem;
+}
+
+.footer-social-icons {
+     display: flex;
+     gap: 1rem;
+}
+
+.footer-social-icons img {
+     width: 20px;
+     height: 20px;
+     filter: brightness(1.2);
+     transition: transform 0.3s ease;
+}
+
+.footer-social-icons img:hover {
+     transform: scale(1.1);
+}
+
+.footer-second-wrapper {
+     text-align: center;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     font-size: 0.85rem;
+     color: #aaaaaa;
+     padding: 0 2rem;
+}
+
+@media screen  and(max-width: 768px){
+     .footer-first-wrapper, .footer-second-wrapper{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+     }
+}
