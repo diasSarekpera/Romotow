@@ -5,7 +5,7 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
           <title>Lumora</title>
-          <link rel="shortcut icon" href="./assets/logo/favicon.ico" type="image/x-icon">
+          <link rel="shortcut icon" href="assets/logo/favicon.ico" type="image/x-icon">
 
           <!-- Titres -->
           <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Prata&family=Marcellus&display=swap" rel="stylesheet">
@@ -16,59 +16,58 @@
      </head>
      <body>
           <!-- Conteneur principale, il contient tous l'nesemble du site comme le papier principale -->
-          <div class="main-wrapper">
-               <!--==== SECTION HERO ====-->
-               <section id="hero" class="hero" role="region" aria-labelledby="hero-title">
-                    <header role="banner">
-                         <nav class="bar-navigation" role="navigation" aria-label="Navigation principale">
-                              <div class="brand">
-                                   <h1>Lumora</h1>
-                              </div>
-                              <div class="desktop-menu">
-                                   <ul>
-                                        <li><a href="#hero">Accueil</a></li>
-                                        <li><a href="#about">À propos</a></li>
-                                        <li><a href="#description">Caractéristiques</a></li>
-                                        <li><a href="#galerie">Galerie</a></li>
-                                        <li><a href="#contact">Contact</a></li>
-                                   </ul>
-                              </div>
-                              <div class="mobile-menu" aria-label="Menu mobile">
-                                   <button type="button" class="menu-btn btns" id="menu-btn" aria-label="Icon menu" aria-expanded="false" aria-controls="menu-list">
-                                        <img src="./assets/icons/menu.png" alt="Icon Menu" class="menu-icon" id="menu-icon">
-                                   </button>
-                                   <ul>
-                                        <li><a href="#hero">Accueil</a></li>
-                                        <li><a href="#about">À propos</a></li>
-                                        <li><a href="#description">Caractéristiques</a></li>
-                                        <li><a href="#galerie">Galerie</a></li>
-                                        <li><a href="#contact">Contact</a></li>
-                                   </ul>
-                              </div>
-                         </nav>
-                    </header>
-          
-                    <div class="hero-content">
-                         <div class="hero-content-title">
-                              <h2 id="hero-title">L'évasion réinventée</h2>
+           <!--==== SECTION HERO ====-->
+           <section id="hero" class="hero" role="region" aria-labelledby="hero-title">
+               <header role="banner">
+                    <nav class="bar-navigation" role="navigation" aria-label="Navigation principale">
+                         <div class="brand">
+                              <h1>Lumora</h1>
                          </div>
-                         <div class="hero-content-infos" aria-label="Informations du modèle">
-                              <p>Romotow T8</p>
-                              <p>160 000 €</p>
+                         <div class="desktop-menu">
+                              <ul>
+                                   <li><a href="#hero">Accueil</a></li>
+                                   <li><a href="#about">À propos</a></li>
+                                   <li><a href="#description">Caractéristiques</a></li>
+                                   <li><a href="#galerie">Galerie</a></li>
+                                   <li><a href="#contact">Contact</a></li>
+                              </ul>
                          </div>
-                         <div class="hero-cta">
-                              <a href="#contact" class="hero-btn btns" role="button" aria-label="Demander une offre personnalisée">Demander une offre</a>
+                         <div class="mobile-menu" aria-label="Menu mobile">
+                              <button type="button" class="menu-btn btns" id="menu-btn" aria-label="Icon menu" aria-expanded="false" aria-controls="menu-list">
+                                   <img src="./assets/icons/menu.png" alt="Icon Menu" class="menu-icon" id="menu-icon">
+                              </button>
+                              <ul>
+                                   <li><a href="#hero">Accueil</a></li>
+                                   <li><a href="#about">À propos</a></li>
+                                   <li><a href="#description">Caractéristiques</a></li>
+                                   <li><a href="#galerie">Galerie</a></li>
+                                   <li><a href="#contact">Contact</a></li>
+                              </ul>
                          </div>
+                    </nav>
+               </header>
+     
+               <div class="hero-content">
+                    <div class="hero-content-title">
+                         <h2 id="hero-title">L'évasion réinventée</h2>
                     </div>
-               </section>
-
+                    <div class="hero-content-infos" aria-label="Informations du modèle">
+                         <p>Romotow T8</p>
+                         <p>160 000 €</p>
+                    </div>
+                    <div class="hero-cta">
+                         <a href="https://wa.me/22940260611?text=Bonjour%20je%20suis%20intéressé%20par%20votre%20caravane%20Lumora" target="_blank" class="btn-whatsapp hero-btn btns" role="button" aria-label="Demander une offre personnalisée">Demander une offre</a>
+                    </div>
+               </div>
+          </section>
+          <div class="main-wrapper">
                <main>
                     <!--==== SECTION À PROPOS ====-->
                     <section id="about" class="about section-animated" role="region" aria-labelledby="about-title">
                          <div class="about-left-content" role="presentation">
                               <figure>
                                    <video controls poster="./assets/Pictures/RomotowT8/img11.jpeg" width="100%" aria-label="Vidéo intérieure Romotow T8">
-                                        <source src="https://res.cloudinary.com/dxixqdrpm/video/upload/v1750868836/Romotow-interior_hlkp2c.mp4" type="video/mp4">
+                                        <source src="./assets/video/Romotow-interior.mp4" type="video/mp4">
                                         La vidéo ne peut pas être lue. Veuillez mettre à jour votre navigateur
                                    </video>
                                    <figcaption style="color: #ffffff;">Design intérieur haut de gamme</figcaption>
@@ -109,7 +108,7 @@
                               Paiement en plusieurs tranches ou acompte personnalisé.</p>
                          
                               <p>
-                                   <a href="#contact" class="about-btn btns" role="button" aria-label="Demander une offre depuis À propos">Demander une offre</a>
+                                   <a href="https://wa.me/22940260611?text=Bonjour%20je%20suis%20intéressé%20par%20votre%20caravane%20Lumora" class="about-btn btns" role="button" aria-label="Demander une offre depuis À propos">Demander une offre</a>
                               </p>
                          </div>
                     </section> 
@@ -407,7 +406,7 @@
                     <section class="pre-footer section-animated" role="region" aria-labelledby="prefooter-title">
                          <h3 id="prefooter-title">Prêt à vivre l'expérience Lumora ?</h3>
                          <p>Recevez une offre personnalisée et entrez dans une nouvelle ère du voyage.</p>
-                         <a href="#contact" class="btn-prefooter btns" role="button" aria-label="Demander une offre">Demander une offre</a>
+                         <a href="https://wa.me/22940260611?text=Bonjour%20je%20suis%20intéressé%20par%20votre%20caravane%20Lumora" class="btn-prefooter btns" role="button" aria-label="Demander une offre">Demander une offre</a>
                     </section>
                </main>
                <!--==== PIED DE PAGE ====-->
@@ -443,7 +442,7 @@
                               <div class="footer-social-icons">
                                    <a href="#" aria-label="Facebook"><img src="./assets/icons/facebook.png" alt="Facebook" /></a>
                                    <a href="#" aria-label="Instagram"><img src="./assets/icons/instagram.png" alt="Instagram" /></a>
-                                   <a href="#" aria-label="LinkedIn"><img src="./assets/icons/linkedin.png" alt="LinkedIn" /></a>
+                                   <a href="https://wa.me/22940260611?text=Bonjour%20je%20suis%20intéressé%20par%20votre%20caravane%20Lumora" aria-label="LinkedIn"><img src="./assets/icons/whatsapp.png" alt="LinkedIn" /></a>
                               </div>
                          </div>
                     </div>
